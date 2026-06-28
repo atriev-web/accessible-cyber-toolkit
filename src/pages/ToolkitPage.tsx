@@ -80,7 +80,7 @@ export default function ToolkitPage() {
         </p>
         <p>
           Got suggestions or feedback to improve this toolkit? We&apos;d love to hear from you.
-          Email us at <a href="mailto:inquire@atriev.org">inquire@atriev.org</a>.
+          Email us at <a href="mailto:inquiry@atriev.org">inquiry@atriev.org</a>.
         </p>
       </section>
 

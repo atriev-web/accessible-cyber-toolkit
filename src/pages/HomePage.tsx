@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import AccessibleVideo from '../components/AccessibleVideo';
 import Collapsible from '../components/Collapsible';
+import CybersecurityTranscript from '../content/CybersecurityTranscript';
 import { usePageTitle } from '../hooks/usePageTitle';
 import { publicAsset } from '../utils/assets';
 
@@ -43,13 +44,8 @@ export default function HomePage() {
           title="Cybersecurity Definition of Terms"
           src={publicAsset('videos/understanding Cybersecurity basics.mp4')}
           disclaimer="This video was generated using AI voice and video generation tools for production purposes. All content, including the script and instructional material, is original and created by the content writer."
+          transcript={<CybersecurityTranscript />}
         />
-        <Collapsible title="Cybersecurity Definition of Terms — transcript">
-          <p>
-            Transcript will be added when the video file is uploaded. This collapsible section
-            keeps the page organized while giving screen reader users a full text alternative.
-          </p>
-        </Collapsible>
       </section>
 
       <section className="content-section highlight-section" aria-labelledby="toolkit-cta-heading">
@@ -181,7 +177,16 @@ export default function HomePage() {
               </a>
             </li>
             <li>
-              <a href="mailto:inquire@atriev.org">inquire@atriev.org</a>
+              <a
+                href="https://www.youtube.com/@ATRIEVI.T.Center"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                ATRIEV I.T. Center YouTube Channel
+              </a>
+            </li>
+            <li>
+              <a href="mailto:inquiry@atriev.org">inquiry@atriev.org</a>
             </li>
           </ul>
         </article>

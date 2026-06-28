@@ -3,7 +3,7 @@ import Collapsible from './Collapsible';
 interface AccessibleVideoProps {
   title: string;
   src?: string;
-  transcript?: string;
+  transcript?: React.ReactNode;
   disclaimer?: string;
 }
 

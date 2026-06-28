@@ -72,6 +72,23 @@ export default function Layout() {
               </li>
               <li>
                 <a
+                  href="https://www.youtube.com/@ATRIEVI.T.Center"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="ATRIEV I.T. Center YouTube channel (opens in new tab)"
+                >
+                  <img
+                    src={`${import.meta.env.BASE_URL}icon-youtube.svg`}
+                    alt=""
+                    aria-hidden="true"
+                    width={32}
+                    height={32}
+                  />
+                  <span className="sr-only">YouTube</span>
+                </a>
+              </li>
+              <li>
+                <a
                   href="https://www.atriev.org"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -89,8 +106,8 @@ export default function Layout() {
               </li>
               <li>
                 <a
-                  href="mailto:inquire@atriev.org"
-                  aria-label="Email ATRIEV at inquire@atriev.org"
+                  href="mailto:inquiry@atriev.org"
+                  aria-label="Email ATRIEV at inquiry@atriev.org"
                 >
                   <img
                     src={`${import.meta.env.BASE_URL}icon-email.svg`}

@@ -375,8 +375,20 @@ h4 {
   color: var(--color-text-muted);
 }
 
-.transcript-text {
-  white-space: pre-wrap;
+.transcript-text h3 {
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-sm);
+}
+
+.transcript-text h3:first-child {
+  margin-top: 0;
+}
+
+.transcript-text blockquote {
+  margin: var(--space-sm) 0 var(--space-md);
+  padding-left: var(--space-md);
+  border-left: 4px solid var(--color-gold-dark);
+  font-style: italic;
 }
 
 .site-footer {
