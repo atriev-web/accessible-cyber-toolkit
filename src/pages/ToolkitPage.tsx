@@ -79,8 +79,8 @@ export default function ToolkitPage() {
           and how to report it the right way.
         </p>
         <p>
-          Got suggestions or feedback to improve this toolkit? We&apos;d love to hear from you.
-          Email us at <a href="mailto:inquiry@atriev.org">inquiry@atriev.org</a>.
+          Got suggestions or feedback, or did you have trouble using a reporting page? We&apos;d love
+          to hear from you. Email us at <a href="mailto:inquiry@atriev.org">inquiry@atriev.org</a>.
         </p>
       </section>
 

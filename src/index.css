@@ -271,6 +271,45 @@ h4 {
   margin-bottom: var(--space-xs);
 }
 
+.qr-link {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: var(--space-md);
+  margin: var(--space-sm) 0 var(--space-md);
+  padding: var(--space-md);
+  background: var(--color-white);
+  border: 2px solid var(--color-black);
+  border-radius: 6px;
+}
+
+.qr-figure {
+  order: -1;
+  margin: 0;
+  padding: 0.4rem;
+  background: var(--color-white);
+  border: 1px solid var(--color-black);
+  flex-shrink: 0;
+}
+
+.qr-figure svg {
+  display: block;
+}
+
+.qr-link-text {
+  flex: 1;
+  min-width: 12rem;
+}
+
+.qr-link-text a {
+  font-weight: 700;
+}
+
+.qr-caption {
+  margin: var(--space-xs) 0 0;
+  font-size: 1rem;
+}
+
 .toolkit-layout {
   display: grid;
   grid-template-columns: 1fr 1fr;

@@ -1,3 +1,4 @@
+import QrLink from '../components/QrLink';
 import { contactSections } from '../data/contacts';
 import { usePageTitle } from '../hooks/usePageTitle';
 import { publicAsset } from '../utils/assets';
@@ -19,6 +20,38 @@ export default function ContactsPage() {
           From official law enforcement and legal agencies to mental health professionals and PWD
           support groups, these are trusted allies who are here to listen, guide, and support you. No
           matter the situation, help is always within reach, just a few clicks away.
+        </p>
+        <p>
+          If you have trouble using this site or an official reporting page, email us at{' '}
+          <a href="mailto:inquiry@atriev.org">inquiry@atriev.org</a>.
+        </p>
+      </section>
+
+      <section className="contact-section" aria-labelledby="offline-heading">
+        <h2 id="offline-heading">If you have little or no internet</h2>
+        <p>
+          You can still get help by calling from a basic mobile or landline phone. You do not need
+          mobile data for these national numbers. Local and regional hotlines will be added later.
+          For now, these numbers work across the Philippines.
+        </p>
+        <ul>
+          <li>
+            Emergency: <a href="tel:911">911</a>
+          </li>
+          <li>
+            Cybercrime, CICC: <a href="tel:1326">1326</a>
+          </li>
+          <li>
+            Lost phone, text spam, and telecom complaints, NTC: <a href="tel:1682">1682</a>
+          </li>
+          <li>
+            Mental health crisis, NCMH: <a href="tel:1553">1553</a>
+          </li>
+        </ul>
+        <p>
+          Save these numbers in your phone while you have signal. You may also go to the nearest
+          police station and ask for the Anti-Cybercrime Group. If you cannot call, ask a trusted
+          family member, friend, barangay official, or teacher to call for you.
         </p>
       </section>
 
@@ -59,18 +92,22 @@ export default function ContactsPage() {
               {entry.links.length > 0 && (
                 <ul className="contact-links">
                   {entry.links.map((link) => (
-                    <li key={`${entry.id}-${link.label}`}>
-                      <a
-                        href={link.href}
-                        {...(link.type === 'website' || link.type === 'social'
-                          ? { target: '_blank', rel: 'noopener noreferrer' }
-                          : {})}
-                      >
-                        {link.label}
-                        {(link.type === 'website' || link.type === 'social') && (
-                          <span className="sr-only"> (opens in new tab)</span>
-                        )}
-                      </a>
+                    <li key={`${entry.id}-${link.label}-${link.href}`}>
+                      {link.showQr ? (
+                        <QrLink label={link.label} href={link.href} type={link.type} />
+                      ) : (
+                        <a
+                          href={link.href}
+                          {...(link.type === 'website' || link.type === 'social'
+                            ? { target: '_blank', rel: 'noopener noreferrer' }
+                            : {})}
+                        >
+                          {link.label}
+                          {(link.type === 'website' || link.type === 'social') && (
+                            <span className="sr-only"> (opens in new tab)</span>
+                          )}
+                        </a>
+                      )}
                     </li>
                   ))}
                 </ul>

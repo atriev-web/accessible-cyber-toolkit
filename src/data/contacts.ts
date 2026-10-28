@@ -2,6 +2,7 @@ export interface ContactLink {
   label: string;
   href: string;
   type?: 'website' | 'email' | 'phone' | 'social';
+  showQr?: boolean;
 }
 
 export interface ContactEntry {
@@ -31,13 +32,18 @@ export const contactSections: ContactSection[] = [
           'The Cybercrime Investigation and Coordinating Center (CICC) is the central coordinating body for cybercrime complaints and referrals under the Department of Information and Communications Technology (DICT). It helps receive, coordinate, and forward cybercrime reports to the proper agencies for investigation and action.',
         logoSrc: 'logos/CICC.jpg',
         links: [
-          { label: 'CICC Official Website', href: 'https://cicc.gov.ph/', type: 'website' },
+          {
+            label: 'CICC Official Website',
+            href: 'https://cicc.gov.ph/',
+            type: 'website',
+            showQr: true,
+          },
           {
             label: 'CICC Cybercrime Reporting Page',
             href: 'https://www.cicc.gov.ph/',
             type: 'website',
           },
-          { label: 'Hotline: 1326', href: 'tel:1326', type: 'phone' },
+          { label: 'Hotline: 1326', href: 'tel:1326', type: 'phone', showQr: true },
         ],
       },
       {
@@ -51,6 +57,7 @@ export const contactSections: ContactSection[] = [
             label: 'PNP Anti-Cybercrime Group',
             href: 'https://pnpacg.ph/',
             type: 'website',
+            showQr: true,
           },
           {
             label: 'PNP Anti-Cybercrime Group Facebook page',
@@ -75,7 +82,12 @@ export const contactSections: ContactSection[] = [
           'The National Bureau of Investigation Cybercrime Division (NBI-CCD) handles complex and high-profile cybercrime cases. It conducts in-depth investigations and digital forensics to help identify offenders, gather strong evidence, and support the prosecution of serious cybercrime incidents.',
         logoSrc: 'logos/NBI.jpg',
         links: [
-          { label: 'NBI Official Website', href: 'https://nbi.gov.ph/', type: 'website' },
+          {
+            label: 'NBI Official Website',
+            href: 'https://nbi.gov.ph/',
+            type: 'website',
+            showQr: true,
+          },
           {
             label: 'NBI Cybercrime Division Complaint',
             href: 'https://nbi.gov.ph/',
@@ -95,6 +107,7 @@ export const contactSections: ContactSection[] = [
             label: 'DOJ Office of Cybercrime',
             href: 'https://www.doj.gov.ph/',
             type: 'website',
+            showQr: true,
           },
           {
             label: 'Office of Cybercrime',
@@ -103,6 +116,50 @@ export const contactSections: ContactSection[] = [
           },
           { label: '+63 2 8524 8216', href: 'tel:+63285248216', type: 'phone' },
           { label: 'cybercrime@doj.gov.ph', href: 'mailto:cybercrime@doj.gov.ph', type: 'email' },
+        ],
+      },
+      {
+        id: 'ntc',
+        name: 'National Telecommunications Commission (NTC)',
+        description:
+          'The National Telecommunications Commission (NTC) handles reports about lost or stolen mobile phones, text spam, and scam messages. You can call, email, or use the official NTC pages below. These pages open on the NTC website because they cannot be shown inside this toolkit.',
+        logoSrc: 'logos/NTC.png',
+        links: [
+          { label: 'Hotline: 1682', href: 'tel:1682', type: 'phone', showQr: true },
+          {
+            label: 'consumer@ntc.gov.ph',
+            href: 'mailto:consumer@ntc.gov.ph',
+            type: 'email',
+          },
+          {
+            label: 'NTC official website',
+            href: 'https://ntc.gov.ph/',
+            type: 'website',
+            showQr: true,
+          },
+          {
+            label: 'NTC INMS reporting portal',
+            href: 'https://inms.ntc.gov.ph/home',
+            type: 'website',
+            showQr: true,
+          },
+          {
+            label: 'Report a lost or stolen cellphone',
+            href: 'https://ntc.gov.ph/loss-stolen-cellphone/',
+            type: 'website',
+            showQr: true,
+          },
+          {
+            label: 'Report text spam',
+            href: 'https://ntc.gov.ph/text-spam-spam-report/',
+            type: 'website',
+            showQr: true,
+          },
+          {
+            label: 'Kontra Text step-by-step guide (PDF)',
+            href: 'https://ntc.gov.ph/wp-content/uploads/2023/kontra_text_scam/STEP%20BY%20STEP%20KONTRATEXT.pdf',
+            type: 'website',
+          },
         ],
       },
       {
